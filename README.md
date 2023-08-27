@@ -1,9 +1,9 @@
 <div align="left">
   <h1> fastify-multipart for Nest.js</h1>
 
-[![Github Actions](https://img.shields.io/github/workflow/status/blazity/nest-file-fastify/Build?style=flat-square)](https://github.com/Blazity/nest-file-fastify)
-[![NPM](https://img.shields.io/npm/v/@blazity/nest-file-fastify.svg?style=flat-square)](https://www.npmjs.com/package/@blazity/nest-file-fastify)
-[![NPM](https://img.shields.io/npm/dm/@blazity/nest-file-fastify?style=flat-square)](https://www.npmjs.com/package/@blazity/nest-file-fastify)
+[![Github Actions](https://img.shields.io/github/actions/workflow/status/mr687/nest-file-fastify/build.yaml?style=flat-square)](https://github.com/mr687/nest-file-fastify)
+[![NPM](https://img.shields.io/npm/v/@mr687/nest-file-fastify.svg?style=flat-square)](https://www.npmjs.com/package/@mr687/nest-file-fastify)
+[![NPM](https://img.shields.io/npm/dm/@mr687/nest-file-fastify?style=flat-square)](https://www.npmjs.com/package/@mr687/nest-file-fastify)
 
 </div>
 
@@ -14,13 +14,13 @@ This library adds decorators for [Nest.js](https://github.com/nestjs/nest) to su
 NPM
 
 ```bash
-$ npm install @blazity/nest-file-fastify @fastify/multipart
+$ npm install @mr687/nest-file-fastify @fastify/multipart
 ```
 
 Yarn
 
 ```bash
-$ yarn add @blazity/nest-file-fastify @fastify/multipart
+$ yarn add @mr687/nest-file-fastify @fastify/multipart
 ```
 
 and register multpart plugin in your Nest.js application
@@ -38,7 +38,7 @@ app.register(fastyfyMultipart);
 ### Single file
 
 ```ts
-import { FileInterceptor, UploadedFile, MemoryStorageFile } from '@blazity/nest-file-fastify';
+import { FileInterceptor, UploadedFile, MemoryStorageFile } from '@mr687/nest-file-fastify';
 
 @Post('upload')
 @UseInterceptors(FileInterceptor('file'))
@@ -56,7 +56,7 @@ uploadFile(@UploadedFile() file: MemoryStorageFile) {
 ### Array of files
 
 ```ts
-import { FilesInterceptor, UploadedFiles, MemoryStorageFile } from '@blazity/nest-file-fastify';
+import { FilesInterceptor, UploadedFiles, MemoryStorageFile } from '@mr687/nest-file-fastify';
 
 @Post('upload')
 @UseInterceptors(FilesInterceptor('files'))
@@ -76,7 +76,7 @@ uploadFile(@UploadedFiles() files: MemoryStorageFile[]) {
 ### Multiple files
 
 ```ts
-import { FileFieldsInterceptor, UploadedFiles, MemoryStorageFile } from '@blazity/nest-file-fastify';
+import { FileFieldsInterceptor, UploadedFiles, MemoryStorageFile } from '@mr687/nest-file-fastify';
 
 @Post('upload')
 @UseInterceptors(FileFieldsInterceptor([
@@ -97,7 +97,7 @@ uploadFile(@UploadedFiles() files: { avatar?: MemoryStorageFile[], background?: 
 ### Any files
 
 ```ts
-import { AnyFilesInterceptor, UploadedFiles, MemoryStorageFile } from '@blazity/nest-file-fastify';
+import { AnyFilesInterceptor, UploadedFiles, MemoryStorageFile } from '@mr687/nest-file-fastify';
 
 @Post('upload')
 @UseInterceptors(AnyFilesInterceptor()
