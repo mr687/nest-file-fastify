@@ -1,6 +1,6 @@
-import { FastifyRequest } from "fastify";
-import { MultipartFile } from "fastify-multipart";
-import { RouteGenericInterface } from "fastify/types/route";
+import type { FastifyRequest } from "fastify";
+import { MultipartFile } from "@fastify/multipart";
+import type { RouteGenericInterface } from "fastify/types/route";
 import { Server, IncomingMessage } from "http";
 
 import { StorageFile, Storage } from "./storage";

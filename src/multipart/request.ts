@@ -1,7 +1,7 @@
 import { BadRequestException } from "@nestjs/common";
 import { HttpArgumentsHost } from "@nestjs/common/interfaces";
-import { FastifyRequest } from "fastify";
-import { RouteGenericInterface } from "fastify/types/route";
+import type { FastifyRequest } from "fastify";
+import type { RouteGenericInterface } from "fastify/types/route";
 import { IncomingMessage, Server } from "http";
 
 import { UploadOptions } from "../multipart/options";

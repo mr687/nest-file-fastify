@@ -1,4 +1,4 @@
-import { FastifyRequest } from "fastify";
+import type { FastifyRequest } from "fastify";
 
 import { UploadOptions } from "../options";
 import { StorageFile } from "../../storage";

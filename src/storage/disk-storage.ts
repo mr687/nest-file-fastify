@@ -1,11 +1,11 @@
-import { MultipartFile } from "fastify-multipart";
-import { FastifyRequest } from "fastify";
+import { MultipartFile } from "@fastify/multipart";
+import type { FastifyRequest } from "fastify";
 import { tmpdir } from "os";
 import { createWriteStream } from "fs";
 import { mkdir, unlink } from "fs/promises";
 import { Server, IncomingMessage } from "http";
 import { join } from "path";
-import { RouteGenericInterface } from "fastify/types/route";
+import type { RouteGenericInterface } from "fastify/types/route";
 
 import { StorageFile, Storage } from "./storage";
 import { getUniqueFilename, pathExists } from "../fs";

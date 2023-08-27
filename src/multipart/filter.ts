@@ -1,5 +1,5 @@
 import { BadRequestException } from "@nestjs/common";
-import { FastifyRequest } from "fastify";
+import type { FastifyRequest } from "fastify";
 import { UploadOptions } from ".";
 
 import { DiskStorageFile, MemoryStorageFile, StorageFile } from "../storage";
